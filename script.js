@@ -1,11 +1,11 @@
 // Use api key from OpenWeatherMap
-const apiKey = "a460ce3e329c21e6dc754ab2fb5a9745"; //use default for now - switch to another during build
+import {apiKey} from "./config.js" //use default for now - switch to another during build
 const apiBaseUrl = "https://api.openweathermap.org/data/2.5/weather?q="; //append units and apiKey
 const times = [
   [0, 4, "night"],
   [5, 11, "morning"],
   [12, 17, "afternoon"],
-  [0, 4, "night"],
+  [18, 24, "night"],
 ];
 // Getting weather data for the desired city in Celsius (units = metric)
 async function getWeather(city, weatherImage, weatherContainer, weatherCard, weatherError) {
@@ -18,7 +18,6 @@ async function getWeather(city, weatherImage, weatherContainer, weatherCard, wea
 
   }
   else{
-
     let data = await response.json();
     let date = getDate(data.dt, data.timezone);
     let timing = getTimes(date.getHours());
