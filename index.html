@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <div class="search-box">
+        <input class="search-input" type="text" placeholder="Enter city name" />
+        <button class="search-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="search-error">
+        <p>Invalid city!</p>
+      </div>
+      <!-- this portion will be dynamic - data received from weather api -->
+      <div class="weather-container">
+        <h1 class="city"></h1>
+        <img
+          src=""
+          class="weather-image"
+          alt="Weather image does not exit"
+        />
+        <h2 class="temperature"></h2>
+        <p class="description"></p>
+      </div>
+    </div>
+    <!-- attribution for images -->
+    <footer class="footer">
+      <a
+        href="https://www.freepik.com/free-vector/gradients-weather-icons-apps-collection_15292634.htm#query=weather&position=46&from_view=keyword&track=sph"
+        >Image by coolvector</a
+      >
+      on Freepik
+    </footer>
+  </body>
+</html>
